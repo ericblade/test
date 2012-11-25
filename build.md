@@ -10,10 +10,10 @@ Usually, this is what you will want to do, so that your package can be installed
 
 Clone the repository at http://www.github.com/openwebos/build-webos and follow the instructions in that README to build Open webOS.
 
-To build or rebuild a single Open webOS component, if your build-webos directory is ~/openwebos/build-webos, do:
+To build or rebuild a single Open webOS component, if your build-webos directory is ~/openwebos/build-webos, and you are wanting to rebuild the component called "luna-universalsearchmgr", do:
 
     $ cd ~/openwebos/build-webos
-    $ make cleanall-[component-name] [component-name] (where [component-name] is the name of the package, such as luna-sysmgr)
+    $ make cleanall-luna-universalsearchmgr luna-universalsearchmgr
 
 The resulting IPK package will be in your BUILD-[target-machine] directory, under deploy/ipk/[architecture], such as this example:
 
