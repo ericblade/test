@@ -59,7 +59,7 @@ To build your local clone of a component, such as luna-sysmgr, instead of the "s
 * Locate the function build_component-name (i.e., build_luna-sysmgr)
 * Change the line "cd $BASE/luna-sysmgr" to use the folder containing your clone, for example "cd ~/github/luna-sysmgr"
 * Close the text editor
-* Remove the file ~/luna-desktop-binaries/component-name/luna-desktop-build.stamp (~/luna-desktop-binaries/luna-sysmgr/luna-desktop-build.stamp)
+* Remove the file ~/luna-desktop-binaries/component-name/luna-desktop-build*.stamp (<tt>~/luna-desktop-binaries/luna-sysmgr/luna-desktop-build*.stamp</tt>)
 * Rebuild by running the build-webos-desktop.sh script again
 
 Cautions:
