@@ -49,7 +49,7 @@ It is often desireable, for rapid iteration and testing purposes, to build a com
 
 Clone the repository at http://www.github.com/openwebos/build-desktop and follow the instructions in the README file.
 
-### Building your local clone of a component
+### Building your local clone
 
 First, follow the directions to build the latest "stable" version.
 
@@ -59,7 +59,7 @@ To build your local clone of a component, such as luna-sysmgr, instead of the "s
 * Locate the function build_component-name (i.e., build_luna-sysmgr)
 * Change the line "cd $BASE/luna-sysmgr" to use the folder containing your clone, for example "cd ~/github/luna-sysmgr"
 * Close the text editor
-* Remove the file ~/luna-desktop-binaries/component-name/luna-desktop-build*.stamp (_~/luna-desktop-binaries/luna-sysmgr/luna-desktop-build*.stamp_)
+* Remove the file ~/luna-desktop-binaries/component-name/luna-desktop-build*.stamp (<tt>~/luna-desktop-binaries/luna-sysmgr/luna-desktop-build*.stamp</tt>)
 * Rebuild by running the build-webos-desktop.sh script again
 
 Cautions:
@@ -96,8 +96,8 @@ Once you have downloaded the source, execute the following to build it (after ch
     $ make
     $ sudo make install
 
-The directory under which the files are installed defaults to _/usr/local/webos_.
-You can install them elsewhere by supplying a value for _WEBOS_INSTALL_ROOT_ when invoking _cmake_. 
+The directory under which the files are installed defaults to <tt>/usr/local/webos</tt>.
+You can install them elsewhere by supplying a value for <tt>WEBOS_INSTALL_ROOT</tt> when invoking <tt>cmake</tt>. 
 
 For example:
 
@@ -105,9 +105,9 @@ For example:
     $ make
     $ make install
 
-will install the files in subdirectories of _$HOME/projects/openwebos_.
+will install the files in subdirectories of <tt>$HOME/projects/openwebos</tt>.
 
-Specifying <tt>WEBOS_INSTALL_ROOT</tt> also causes _pkg-config_ to look in that tree first before searching the standard locations.
+Specifying <tt>WEBOS_INSTALL_ROOT</tt> also causes <tt>pkg-config</tt> to look in that tree first before searching the standard locations.
 You can specify additional directories to be searched prior to this one by setting the <tt>PKG_CONFIG_PATH</tt> environment variable.
 
 To see all of the make targets that CMake has generated, issue:
