@@ -1,20 +1,21 @@
 How to Build on Linux
 =====================
 
-## Building using the OpenEmbedded meta-webos layer
+## Building using OpenEmbedded 
 
-Using the meta-webos layer for OpenEmbedded is the preferred method of building webOS components.  Usually, this is what you will want to do, so that your package can be installed into a webOS system, or as part of a webOS image.
+Using the meta-webos layer for OpenEmbedded is the preferred method of building Open webOS components.
+Usually, this is what you will want to do, so that your package can be installed into an Open webOS system, or as part of an Open webOS image.
 
 ### Building the latest "stable" version
 
 Clone the repository at http://www.github.com/openwebos/build-webos and follow the instructions in that README to build Open webOS.
 
-To build or rebuild a single Open webOS component, if your build-webos directory is ~/openwebos/build-webos, use:
+To build or rebuild a single Open webOS component, if your build-webos directory is ~/openwebos/build-webos, do:
 
     $ cd ~/openwebos/build-webos
-    $ make cleanall-<componentname> <componentname> (where <componentname> is the name of the package, such as luna-sysmgr)
+    $ make cleanall-<component-name> <component-name> (where <component-name> is the name of the package, such as luna-sysmgr)
 
-The resulting IPK package will be in your BUILD directory, under deploy/ipk/<architecture>, such as this example:
+The resulting IPK package will be in your BUILD-<target-machine> directory, under deploy/ipk/<architecture>, such as this example:
 
     ~/openwebos/build-webos/BUILD-qemux86/deploy/ipk/i586/luna-universalsearchmgr_2.0.0-1.00-r5_i586.ipk
 
@@ -32,11 +33,11 @@ After successfully building the latest stable version, you may configure build-w
 
 You can specify what directory to use as the local source inside the file "global-webos.conf" in your home directory, or within the file "webos-local.conf" within the build-webos directory, by adding the following:
 
-    S_pn-<componentname> = "/path/to/component/source"
+    S_pn-<component-name> = "/path/to/component/source"
 
 such as in this example:
 
-    S_pn-luna-universalsearchmgr = "/path/to/my/luna-universalsearchmgr"
+    S_pn-luna-universalsearchmgr = "/home/user/openwebos/luna-universalsearchmgr"
 
 Then follow the instructions above to rebuild and install this package.
 
@@ -106,7 +107,8 @@ For example:
 
 will install the files in subdirectories of <tt>$HOME/projects/openwebos</tt>.
 
-Specifying <tt>WEBOS_INSTALL_ROOT</tt> also causes <tt>pkg-config</tt> to look in that tree first before searching the standard locations. You can specify additional directories to be searched prior to this one by setting the <tt>PKG_CONFIG_PATH</tt> environment variable.
+Specifying <tt>WEBOS_INSTALL_ROOT</tt> also causes <tt>pkg-config</tt> to look in that tree first before searching the standard locations.
+You can specify additional directories to be searched prior to this one by setting the <tt>PKG_CONFIG_PATH</tt> environment variable.
 
 To see all of the make targets that CMake has generated, issue:
 
