@@ -123,3 +123,11 @@ Next, cd to the folder where you have cloned this source code, and execute the f
     $ make -f Makefile.Ubuntu.Release install
 
 This will create the binary [mojodb-luna] under the folder [release-linux-x86][, along with libraries libmojocore.so, libmojodb.so and libmojoluna.so]
+
+#### Uninstalling
+
+From the directory where you originally ran `make install`, enter:
+
+    $ [sudo] make uninstall
+
+You will need to use `sudo` if you did not specify `WEBOS_INSTALL_ROOT`.
