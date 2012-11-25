@@ -13,9 +13,9 @@ Clone the repository at http://www.github.com/openwebos/build-webos and follow t
 To build or rebuild a single Open webOS component, if your build-webos directory is ~/openwebos/build-webos, do:
 
     $ cd ~/openwebos/build-webos
-    $ make cleanall-<component-name> <component-name> (where <component-name> is the name of the package, such as luna-sysmgr)
+    $ make cleanall-[component-name] [component-name] (where [component-name] is the name of the package, such as luna-sysmgr)
 
-The resulting IPK package will be in your BUILD-<target-machine> directory, under deploy/ipk/<architecture>, such as this example:
+The resulting IPK package will be in your BUILD-[target-machine] directory, under deploy/ipk/[architecture], such as this example:
 
     ~/openwebos/build-webos/BUILD-qemux86/deploy/ipk/i586/luna-universalsearchmgr_2.0.0-1.00-r5_i586.ipk
 
@@ -33,7 +33,7 @@ After successfully building the latest stable version, you may configure build-w
 
 You can specify what directory to use as the local source inside the file "global-webos.conf" in your home directory, or within the file "webos-local.conf" within the build-webos directory, by adding the following:
 
-    S_pn-<component-name> = "/path/to/component/source"
+    S_pn-[component-name] = "/path/to/component/source"
 
 such as in this example:
 
