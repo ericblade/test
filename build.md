@@ -4,7 +4,8 @@ How to Build on Linux
 ## Building using OpenEmbedded 
 
 Using the meta-webos layer for OpenEmbedded is the preferred method of building Open webOS components.
-Usually, this is what you will want to do, so that your package can be installed into an Open webOS system, or as part of an Open webOS image.
+
+This allows your package to be installed into an Open webOS system, or as part of an Open webOS image.
 
 ### Building the latest "stable" version
 
@@ -53,13 +54,13 @@ Clone the repository at http://www.github.com/openwebos/build-desktop and follow
 
 First, follow the directions to build the latest "stable" version.
 
-To build your local clone of a component, such as luna-sysmgr, instead of the "stable" version installed with the build-webos-desktop script:
+To build your local clone of a component, such as luna-universalsearchmgr, instead of the "stable" version installed with the build-webos-desktop script:
 
 * Open the build-webos-desktop.sh script with a text editor
-* Locate the function build_component-name (i.e., build_luna-sysmgr)
-* Change the line "cd $BASE/luna-sysmgr" to use the folder containing your clone, for example "cd ~/github/luna-sysmgr"
+* Locate the function build_component-name (i.e., build_luna-universalsearchmgr)
+* Change the line "cd $BASE/luna-universalsearchmgr" to use the folder containing your clone, for example "cd ~/openwebos/luna-universalsearchmgr"
 * Close the text editor
-* Remove the file ~/luna-desktop-binaries/component-name/luna-desktop-build*.stamp (<tt>~/luna-desktop-binaries/luna-sysmgr/luna-desktop-build*.stamp</tt>)
+* Remove the file ~/luna-desktop-binaries/component-name/luna-desktop-build*.stamp (<tt>~/luna-desktop-binaries/luna-universalsearchmgr/luna-desktop-build*.stamp</tt>)
 * Rebuild by running the build-webos-desktop.sh script again
 
 Cautions:
